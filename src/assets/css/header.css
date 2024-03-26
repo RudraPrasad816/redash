@@ -1,0 +1,121 @@
+header{
+    padding: 5px 20px;
+    grid-area: header;
+    width: 100%;
+    color: var(--text-primary);
+    min-height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-left{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.icon-wrapper, .search-wrapper, .theme-toggler{
+    height: 40px;
+    padding: 6px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 15px var(--shadow-primary);
+    background-color: var(--bg-secondary);
+}
+header .icon{
+    background-color: var(--bg-secondary);
+    cursor: pointer;
+}
+
+header .header-right{
+    display: flex;
+    gap:10px;
+    align-items: center;
+    position: relative;
+}
+
+header .avatar{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px var(--shadow-primary);
+    background-color: var(--bg-secondary);
+}
+.search-wrapper{
+    gap: 5px;
+}
+.search-wrapper input{
+    height: 100%;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background-color: var(--bg-secondary);
+}
+
+.search-wrapper input::placeholder{
+    color: var(--text-disabled)
+}
+
+.avatar-dropdown{
+    position: absolute;
+    width: max-content;
+    top: 110%;
+    right: 0;
+    height: fit-content;
+    width: max-content;
+    border-radius: 20px;
+    border: 1px solid #f9f9f9;
+    background-color: var(--bg-secondary);
+    padding: 10px 15px;
+    box-shadow: 0px 5px 15px var(--shadow-primary);
+}
+.avatar-dropdown h3{
+    padding-bottom: 8px;
+}
+.avatar-dropdown a{
+    text-decoration: none;
+    color: var(--text-secondary);
+}
+.avatar-dropdown a p{
+    padding: 8px 0;
+}
+
+.avatar-dropdown.collapse{
+    display: none;
+}
+.avatar-dropdown.expand{
+    display: block;
+    transition: all 1s ease-in-out;
+}
+
+header button{
+    outline:0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 4px;
+    width: max-content;
+    letter-spacing: 1px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--bg-secondary);
+    border: 1px solid var(--bg-teal-900);
+    background-color: var(--bg-teal-900);
+    transition-duration: .2s;
+}
+
+button:hover{
+    transition: all .2s ease-in;
+    color: var(--bg-teal-900);
+    background-color: transparent;
+}

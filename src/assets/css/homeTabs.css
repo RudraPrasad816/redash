@@ -1,0 +1,16 @@
+.announcement-tabs{
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+}
+.announcement-tabs .tabs{
+    display: flex;
+    align-items: center;
+}
+.announcement-tabs .panel{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 15px;
+    min-height: 100px;
+    color: var(--text-disabled);
+    border: 1px solid var(--bg-primary);
+}

@@ -1,0 +1,23 @@
+.error-page{
+    height: 100dvh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-primary);
+}
+.error-page h1{
+    font-size: 50px;
+    color: var(--danger);
+    opacity: .9;
+}
+.error-page h3{
+    font-size: 25px;
+    color: var(--text-secondary);
+}
+.error-page p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-disabled);
+}
