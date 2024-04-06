@@ -1,0 +1,45 @@
+.sidebar{
+    grid-area: sidebar;
+    padding: 0 15px 20px 15px;
+    background-color: var(--bg-secondary);
+}
+
+.sidebar .logo-container{
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    height: 8vh;
+    width: auto;
+}
+
+ul{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    list-style-type: none;
+}
+.sidebar ul a{
+    padding: 8px 15px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+}
+.sidebar ul a:hover{
+    color: var(--bg-secondary);
+    background-color: var(--bg-teal-400);
+}
+
+.sidebar ul a.active{
+    color: var(--bg-secondary);
+    background-color: var(--bg-teal-800);
+}

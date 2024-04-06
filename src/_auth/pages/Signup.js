@@ -70,7 +70,7 @@ export const Signup = () => {
             set(ref(database, 'users/' + user.uid), {
                 firstName : userData.firstName,
                 lastName : userData.lastName,
-                email : userData.lastName,
+                email : userData.email,
                 role : "admin"
             })
         }

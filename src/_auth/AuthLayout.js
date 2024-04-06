@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom"
 import logo from '../assets/images/ReDashLogo.png'
 import logowithtext from '../assets/images/ReDashLogoWithText.png'
 
-import '../assets/css/AuthLayout.css'
+import './css/AuthLayout.css'
 
 export const AuthLayout = () => {
     return (

@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom"
 
-import '../../assets/css/notfound.css'
+import './css/notfound.css'
 
 export const NotFound = () => {
 

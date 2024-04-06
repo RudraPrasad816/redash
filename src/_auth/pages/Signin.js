@@ -6,7 +6,7 @@ import { FaUser } from "react-icons/fa"
 import { RiLockPasswordFill } from "react-icons/ri"
 import { ScaleLoader } from "react-spinners"
 
-import '../../assets/css/signin.css'
+import '../css/signin.css'
 
 import { auth } from "../../Firebase/firebse"
 

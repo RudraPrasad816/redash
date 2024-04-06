@@ -1,0 +1,67 @@
+.create-user-wrapper{
+    color: var(--text-secondary);
+}
+
+form{
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+.personal-details,
+.professional-details{
+    background-color: var(--bg-secondary);
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.personal-details > h4{
+    margin-bottom: 10px;
+}
+.personal-details .inputs{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.inputs > div{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+.inputs label{
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.inputs input{
+    padding: 8px 10px;
+    outline: 0;
+    border: 1px solid var(--text-disabled);
+    border-radius: 4px;
+    background-color: var(--bg-primary);
+}
+.inputs .gender-box{
+    margin-top: 10px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.gender-box > h4{
+    font-size: 14px;
+    font-weight: 600;
+}
+.gender-box > div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.gender-box > div > div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+form ::placeholder{
+    font-size: 14px;
+    color: var(--text-disabled);
+}

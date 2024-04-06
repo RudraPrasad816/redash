@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { addDoc, collection } from 'firebase/firestore'
 
-import '../../assets/css/home.css'
+import './css/home.css'
+
 import task from '../../assets/images/task.png'
 import { db } from '../../Firebase/firebse'
-import { Organization } from '../../components'
+import { Organization } from '../components'
 
 export const Home = () => {
 

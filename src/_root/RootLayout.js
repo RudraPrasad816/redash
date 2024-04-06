@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
-import { Header, Sidebar } from "../components";
+import { Header, Sidebar } from "./components";
 
-import '../assets/css/rootlayout.css'
+import './pages/css/rootlayout.css'
 
 export const RootLayout = () => {
 

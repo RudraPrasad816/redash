@@ -4,11 +4,10 @@ import { Route, Routes } from "react-router-dom";
 import { AuthLayout } from "./_auth/AuthLayout";
 import { Signin, Signup } from "./_auth/pages";
 import { RootLayout } from "./_root/RootLayout";
-import { Home, DashboardLayout, NotFound } from "./_root/pages";
-import { Attendance, Leave, Performance, Apps } from "./_root/pages/DashboardPages";
+import { Home, DashboardLayout, NotFound, CreateUser, Profile, ProfileLayout, Attendance, Leave, Performance, Apps } from "./_root/pages";
 
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from './Firebase/firebse'
+import { auth, database } from './Firebase/firebse'
 
 import { ThemeContext } from "./context/ThemeContext";
 
@@ -53,6 +52,10 @@ export default function App() {
                                     element={<Performance />}
                                 />
                                 <Route path={"/dashboard/apps"} element={<Apps />} />
+                            </Route>
+                            <Route path="/employee" element={<ProfileLayout />}>
+                                <Route path="employee/profile" element={<Profile />} />
+                                <Route path="employee/create-user" element={<CreateUser />} />
                             </Route>
                         </Route>
                     )}
