@@ -1,7 +1,6 @@
 .home, 
 .dash-layout, 
-.profile-wrapper,
-.create-user-wrapper{
+.profile-layout-wrapper{
     grid-area: home;
     padding: 5px 20px;
     color: var(--text-primary);

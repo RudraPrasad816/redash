@@ -8,6 +8,7 @@ import './css/home.css'
 import task from '../../assets/images/task.png'
 import { db } from '../../Firebase/firebse'
 import { Organization } from '../components'
+import { toast } from 'react-toastify'
 
 export const Home = () => {
 
@@ -39,12 +40,16 @@ export const Home = () => {
             let dateTime = new Date();
             setClockInTime(dateTime.toLocaleTimeString());
             localStorage.setItem("clockinDateTime", JSON.stringify(dateTime))
+            if(!isClockin){
+                toast.success("clock in successfully")
+            }
             setIsClockin(!isClockin)
         }
         else {
             let dateTime = new Date();
             let clockinDateTime = new Date(JSON.parse(localStorage.getItem("clockinDateTime")))
             let workingHour = (((dateTime.getTime() - clockinDateTime.getTime()) / 1000) / 3600).toFixed(2);
+            toast.success(`clock out at ${dateTime.toLocaleTimeString()}`)
             setIsClockin(false);
             localStorage.setItem("clockinDateTime", null)
             storeAttendance(uid, currentDate, clockinDateTime, dateTime, workingHour);

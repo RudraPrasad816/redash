@@ -53,9 +53,15 @@ export default function App() {
                                 />
                                 <Route path={"/dashboard/apps"} element={<Apps />} />
                             </Route>
-                            <Route path="/employee" element={<ProfileLayout />}>
-                                <Route path="employee/profile" element={<Profile />} />
-                                <Route path="employee/create-user" element={<CreateUser />} />
+                            <Route path="/employee" element={<ProfileLayout />} >
+                                <Route
+                                    path="/employee/profile"
+                                    element={<Profile />}
+                                />
+                                <Route
+                                    path="/employee/create-user"
+                                    element={<CreateUser />}
+                                />
                             </Route>
                         </Route>
                     )}

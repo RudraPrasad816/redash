@@ -1,29 +1,57 @@
 .create-user-wrapper{
+    margin-top: 10px;
     color: var(--text-secondary);
 }
 
 form{
     width: 100%;
-    margin-top: 20px;
     padding: 0;
     display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-areas: "personal contact" "profesional profesional";
+}
+@media (max-width: 1000px){
+    form{
+        grid-template-areas: "personal" "contact" "profesional";
+    }
+}
+.personal-details{
+    grid-area: personal;
+}
+.contact-details{
+    grid-area: contact;
+}
+.profesional-details{
+    grid-area: profesional;
 }
 .personal-details,
-.professional-details{
+.contact-details,
+.profesional-details{
     background-color: var(--bg-secondary);
     padding: 20px 10px;
     display: flex;
     flex-direction: column;
 }
-.personal-details > h4{
+
+.personal-details > h4, .contact-details > h4, .profesional-details > h4{
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
-.personal-details .inputs{
+.personal-details > h4{
+    color: var(--card-accent-5);
+}
+.contact-details > h4{
+    color: var(--card-accent-2);
+}
+.profesional-details > h4{
+    color: var(--card-accent-3)
+}
+
+.inputs{
     display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
 }
 .inputs > div{
     display: flex;
@@ -35,19 +63,43 @@ form{
     font-weight: 600;
     text-transform: capitalize;
 }
-.inputs input{
+.inputs input, textarea, select{
     padding: 8px 10px;
     outline: 0;
-    border: 1px solid var(--text-disabled);
     border-radius: 4px;
     background-color: var(--bg-primary);
 }
+
+.personal-details input{
+    border: 1px solid var(--card-accent-5);
+}
+.contact-details input, textarea{
+    border: 1px solid var(--card-accent-2);
+}
+.profesional-details input, .profesional-details select{
+    border: 1px solid var(--card-accent-3);
+}
+
+.personal-details input[type=radio]{
+    accent-color: var(--card-accent-5);
+}
+.contact-details input[type=radio]{
+    accent-color: var(--card-accent-2);
+}
+.profesional-details input[type=radio]{
+    accent-color: var(--card-accent-3);
+}
 .inputs .gender-box{
-    margin-top: 10px;
+    margin-top: 20px;
     grid-column-start: 1;
+    grid-column-end: 2;
+}
+.inputs .marrital-box{
+    margin-top: 20px;
+    grid-column-start: 2;
     grid-column-end: 3;
 }
-.gender-box > h4{
+.gender-box > h4, .marrital-box > h4{
     font-size: 14px;
     font-weight: 600;
 }
@@ -64,4 +116,31 @@ form{
 form ::placeholder{
     font-size: 14px;
     color: var(--text-disabled);
+}
+.marrital-box > div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.marrital-box > div > div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.address{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.nationality{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.profesional-details{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.create-user-wrapper form button{
+    margin-top: 25px;
 }

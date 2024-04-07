@@ -99,13 +99,14 @@ export const Header = ({ collapse, handleSidebarCollapse }) => {
                     }
                 </h3>
                 <hr></hr>
-                <Link to="/Profile" onClick={handleDropdownExpand}>
+
+                <Link to="employee/profile" onClick={handleDropdownExpand}>
                     <p>View Profile</p>
                 </Link>
                 {
                     userRole === "admin" || userRole === "superadmin"
                         ?
-                        <Link to="/create-user" onClick={handleDropdownExpand}>
+                        <Link to="employee/create-user" onClick={handleDropdownExpand}>
                             <p>Create New User</p>
                         </Link>
                         :

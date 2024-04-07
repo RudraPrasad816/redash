@@ -9,6 +9,7 @@ import { ScaleLoader } from "react-spinners"
 import '../css/signin.css'
 
 import { auth } from "../../Firebase/firebse"
+import { toast } from "react-toastify"
 
 export const Signin = () => {
 
@@ -43,11 +44,10 @@ export const Signin = () => {
                 }, 1000)
             })
             .catch((error) => {
-                setErrorMessage(error.message);
+                console.log(error.message)
+                const message = error.message.split("(")[1].split(")")[0].split("/")[1];
+                toast.error(message)
                 setIsLoading(false)
-                setTimeout(() => {
-                    setErrorMessage("")
-                }, 2000)
             })
     }
 

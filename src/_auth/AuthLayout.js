@@ -3,10 +3,12 @@ import logo from '../assets/images/ReDashLogo.png'
 import logowithtext from '../assets/images/ReDashLogoWithText.png'
 
 import './css/AuthLayout.css'
+import { ToastContainer } from "react-toastify"
 
 export const AuthLayout = () => {
     return (
         <div className="auth-wrapper">
+            <ToastContainer />
             <div className="auth-card">
                 <div className="image">
                     <img src={logo} alt="logo" className="logo" />
